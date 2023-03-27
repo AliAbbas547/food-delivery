@@ -1,12 +1,12 @@
 const express= require("express")
 const router=require("./routes/route")
 const {mongoose}= require("mongoose")
-const  dotenv= require("dotenv")
-require("dotenv").config()
-const app= express()
-const PORT= process.env.PORT || 8000
 
-const url=process.env.DB
+
+const app= express()
+const PORT= process.env.PORT || 5000
+
+const url="mongodb+srv://aliabbasbackendcohort:AMMIabbu321@cluster67.6fp98uh.mongodb.net/food?retryWrites=true&w=majority"
 app.use(express.json())
 const cors= require('cors')
 app.use(cors({origin: true, credentials: true}));
